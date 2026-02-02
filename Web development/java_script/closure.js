@@ -1,17 +1,31 @@
 // function who use the its outer function variable after its exicution end lexical environment
 
-function outer(){
+// function outer(){
 
-    let count =0;
+//     let count =0;
 
-    function inner(){
-        count++;
-        console.log(count);
-    }
-    return inner;
+//     function inner(){
+//         count++;
+//         console.log(count);
+//     }
+//     return inner;
+// }
+
+// const fn=outer();
+// fn();
+// fn();
+// fn();
+
+
+function test(){
+    let a=10;
+    return function (){
+            console.log(a);
+    };
 }
 
-const fn=outer();
-fn();
-fn();
-fn();
+const a=test();
+const b=test();
+
+a()
+b()
