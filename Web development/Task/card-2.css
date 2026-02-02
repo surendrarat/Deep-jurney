@@ -1,0 +1,14 @@
+.products{
+display: grid;
+grid-column: repeat(auto-fit,minmax(220px ,1fr));
+gap: 20px;
+padding: 20px;
+}
+
+.card {
+  background: #e5e7eb;
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+}

@@ -1,0 +1,13 @@
+.container{
+    background-color: rebeccapurple;
+    padding: 16px;
+    
+}
+
+/* enhence for large system */
+@media (min-width: 786px){
+    .container {
+    padding: 32px;
+  }
+ 
+}

@@ -1,0 +1,22 @@
+.login-box{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+
+.login{
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.make{
+    display: flex;
+    justify-content: center;
+}

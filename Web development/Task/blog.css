@@ -1,0 +1,36 @@
+.blog-layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 70px 1fr 50px;
+  grid-template-areas:
+    "header header"
+    "article related"
+    "footer footer";
+}
+
+.blog-header {
+  grid-area: header;
+  background: #111827;
+  color: white;
+  padding: 20px;
+}
+
+.article {
+  grid-area: article;
+  padding: 20px;
+}
+
+.related {
+  grid-area: related;
+  background: #f3f4f6;
+  padding: 20px;
+}
+
+.blog-footer {
+  grid-area: footer;
+  background: #111827;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}

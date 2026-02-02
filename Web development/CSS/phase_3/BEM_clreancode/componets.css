@@ -1,0 +1,22 @@
+.cards{
+    background-color: #279280;
+    /* background-color: #f3f4f6; */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+}
+
+.cards__title{
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+}
+
+.cards__description{
+    font-size: 1rem;
+    color: #374151;
+}
+
+.cards--property{
+     border: 2px solid #2563eb;
+  background-color: #eef2ff;
+}

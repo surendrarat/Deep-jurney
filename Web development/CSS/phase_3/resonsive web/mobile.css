@@ -1,0 +1,18 @@
+/* mobile first */
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.menu {
+  display: none;
+}
+
+@media(min-width:786px){
+    .menu{
+        display: flex;
+        gap: 20px;
+    }
+}
