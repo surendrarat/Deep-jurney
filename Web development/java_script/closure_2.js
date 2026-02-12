@@ -16,6 +16,6 @@ function bankAccount() {
 
 const acc=bankAccount();
 
-acc.deposit(230)
+acc.deposit(1230)
 console.log(acc.getbalance());
 
