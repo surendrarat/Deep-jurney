@@ -19,4 +19,15 @@ const g=[...h]
 g.push(2)
 console.log(g);
 
+// using the push -add in last , pop-remove form last, shift - remove first ,unshift-add first
 
+const method=[3,5,2,4];
+method.push(6);
+console.log(method)
+method.pop()
+console.log(method)
+
+
+console.log(method.shift());
+console.log(method.unshift(3,2,1));
+console.log(method)
