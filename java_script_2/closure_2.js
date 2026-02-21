@@ -21,8 +21,27 @@ function test (){
 }
 
 const pass=test();
-pass();
-pass();
-pass();
+// pass();
+// pass();
+// pass();
 
+// --------------------------------------------------------------
+function match(name){
+    let score=0;
 
+    return {
+        increment(){
+            score++;
+            console.log(score);
+        },
+        getscore(){
+                return score;
+        }
+    };
+}
+
+ const cricket =match("suru");
+ cricket.increment();
+ cricket.increment();
+
+console.log(cricket.getscore());
