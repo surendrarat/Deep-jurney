@@ -17,3 +17,17 @@ const counter= outer();
 counter();
 counter();
 counter();
+
+function grond(){
+    let snad=10;
+// console.log(snad);
+
+    return function (){
+        console.log(snad);
+    }
+}
+
+const fun=grond();
+
+grond();
+fun();
