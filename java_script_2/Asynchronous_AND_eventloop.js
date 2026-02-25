@@ -1,11 +1,11 @@
-console.log("start");
+// console.log("start");
 
-setTimeout(() => {
-    console.log("Timeout")
-}, 0);
+// setTimeout(() => {
+//     console.log("Timeout")
+// }, 0);
 
-console.log("End");
-console.log("\n\n")
+// console.log("End");
+// console.log("\n\n")
 /*  
 javascript is single threaded
 one call stack , one thing executes at a time
@@ -25,6 +25,7 @@ microtask queue
 Event loop
 */
 
+// this is second example
 // promise (microtasks ) vs macrotask(setTimeout)
 console.log("start");
 
@@ -50,15 +51,22 @@ MutationObserver
 These go to:
 👉 Microtask Queue
 Microtasks have higher priority. */
-console.log("\n");
 
-console.log("A");
+// this is third example
+// microtask can genete mote microtask
+// Microtasks completely drain before macrotasks run.
 
-setTimeout(() => console.log("B"), 0);
+// This is why Promises feel “faster” than setTimeout.
 
-Promise.resolve().then(() => {
-  console.log("C");
-  Promise.resolve().then(() => console.log("D"));
-});
+// console.log("\n");
 
-console.log("E");
+// console.log("A");
+
+// setTimeout(() => console.log("B"), 0);
+
+// Promise.resolve().then(() => {
+//   console.log("C");
+//   Promise.resolve().then(() => console.log("D"));
+// });
+
+// console.log("E");
