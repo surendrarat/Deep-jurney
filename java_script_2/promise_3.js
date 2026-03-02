@@ -17,6 +17,7 @@ return 5;
 then nextpromise resolves with 5
 internally 
 resolve (nextpromise,5)
+
 if x is a promise
 return promise.resolve(5)
 then the next promise waits for it
@@ -67,3 +68,38 @@ handleError();
 but asynchonuous
 */
 
+/* 
+Async /Await Error internals 
+
+*/
+
+async function test(){
+    throw "Error";
+}
+//Becomes:
+function test(){
+    return Promise.reject(Error)
+}
+// async functions always return promises.
+
+/*
+unhandled Rejection
+if a promise rejects and no .catch() handlesit 
+In browser:
+you get UnhandledPromisRejection warning.
+In Node.js 
+it may crash the process(depending on version)
+No catch=dengerous
+*/
+
+Promise.resolve().then(() => {
+    return Promise.reject("A")
+})
+.catch(err => {
+
+console.log("Caught:" ,err);
+return "B";
+})
+.then(value=>{
+    console.log("Final: " , value);
+});
