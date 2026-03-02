@@ -1,7 +1,7 @@
 
-return new Promise(resolve => {
-  setTimeout(() => resolve(2), 0);
-});
+// return new Promise(resolve => {
+//   setTimeout(() => resolve(2), 0);
+// });
 
 // promise resolution procedure
 /* 
@@ -46,13 +46,13 @@ throw new Error ("Fail")
 next promise becomes rejected.
 */
 
-Promise.resolve().then(() => {throw "Error A"})
-.then(()=>{
-    console.log("won't run");
-})
-.catch(err=>{
-    console.log("Caught:" ,err);
-});
+// Promise.resolve().then(() => {throw "Error A"})
+// .then(()=>{
+//     console.log("won't run");
+// })
+// .catch(err=>{
+//     console.log("Caught:" ,err);
+// });
 
 /* 
 promise chain behaves like synchronous try / catch:
@@ -73,13 +73,13 @@ Async /Await Error internals
 
 */
 
-async function test(){
-    throw "Error";
-}
-//Becomes:
-function test(){
-    return Promise.reject(Error)
-}
+// async function test(){
+//     throw "Error";
+// }
+// //Becomes:
+// function test(){
+//     return Promise.reject(Error)
+// }
 // async functions always return promises.
 
 /*
@@ -102,4 +102,17 @@ return "B";
 })
 .then(value=>{
     console.log("Final: " , value);
+});
+
+
+// another trap question on promise resolve
+
+Promise.resolve().then(()=> {
+    throw "A"
+})
+.then( err => {
+    console.log("caught: ",err);
+})
+.then(value=>{
+    console.log("Final:", value);
 });
